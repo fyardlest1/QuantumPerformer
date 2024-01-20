@@ -44,7 +44,7 @@ function generateNumbers(start, end) {
 function displayNumbers(values) {
 	// - put the HTML on the page on the element with the result id
 	let resultsTable = document.getElementById('result');
-	// clear the the innerHTML before
+	// clear the innerHTML
 	resultsTable.innerHTML = '';
 
 	// for each number in values:
