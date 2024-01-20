@@ -193,7 +193,7 @@
 						solution that works. What should we solve? What approach
 						will allow us to get there?
 					</p>
-					<p>What we need to do is write a program that displays the numbers from 0 to 100 and display the even numbers in BOLD.</p>
+					<p>What we need to do is write a program that displays the numbers from 0 to 100 and display the even numbers in <b>BOLD</b>.</p>
 					<p>
 						As far as I am concerned, I focused on three steps which will allow me to provide a solution.
 						<ol>
@@ -202,7 +202,7 @@
 							<li>put those numbers on the page</li>
 						</ol>
 					</p>
-					<h5>Functions and loops in action</h5>
+					<h5>Functions and loop in action</h5>
 					<h5>
 						<code>getValues()</code>
 					</h5>
@@ -220,9 +220,37 @@
 					<h5>
 						<code>generateNumbers()</code>
 					</h5>
+					<p>
+						The <code>generateNumbers</code> function is very simple, it takes two values as parameters, 
+						a starting value and an arriving value, we iterate using the two values in a for loop, 
+						then we add the result of the iteration in a list which was initially empty using the build in 
+						javascript <code>push</code> function. And finally we use the "return" statement in the <code>generateNumbers</code> 
+						function to indicate the value that the function should return when it is called or executed, 
+						in this case our list of number.
+					</p>
+					<!-- <p >
+						When a function is invoked, the code inside the function is executed, and the return statement 
+						specifies the value that the function will produce as its result.
+					</p> -->
 					<h5>
 						<code>displayNumbers()</code>
 					</h5>
+					<p>
+						The <code>displayNumber</code> function as its name suggests takes an array of values as its parameter, and 
+						display these numbers in an HTML table. At first, we retrieves the HTML element with the id 'result', 
+						and next we clear all existing HTML content within the results table. Right after that, 
+						we use a for loop to iterate through each number in the 'values' array. We initialize a variable 'number' 
+						with the current value from the array, and starts building an HTML string with an opening table row 
+						(&lt;tr>) and table cell (&lt;td>) by creating an 'html' variable.
+					</p>
+					<p>
+						Now it is time to check whether the current number is even (<code>number % 2 == 0</code>). 
+						If the remainder is 0 while emptying the number by 2, it is an even number, 
+						then the number is enclosed in &lt;b> tags to make it bold. If the number is not, 
+						the number remains the same. And, as good programmers we do not forget to close 
+						the html tags for the table cell (&lt;/td>) and table row (&lt;/tr>). 
+						Finally append the generated HTML for the current number to the existing content of the results table.
+					</p>
 				</div>
 			</div>
 		</main>
